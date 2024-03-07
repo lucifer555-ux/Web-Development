@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delayed Popup with Close Button</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .popup-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 999;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      background-color: red;
+      height: 20px;
+      width: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="popup-container" id="popupContainer">
+  <span class="close-btn" onclick="closePopup()">X</span>
+  <h2>Popup Content</h2>
+  <p>This popup appears after 10 seconds.</p>
+</div>
+
+<script>
+  // Function to show the popup
+  function showPopup() {
+    document.getElementById('popupContainer').style.display = 'block';
+  }
+
+  // Function to close the popup
+  function closePopup() {
+    document.getElementById('popupContainer').style.display = 'none';
+  }
+
+  // Set timeout to show popup after 10 seconds
+  setTimeout(showPopup, 10000);
+</script>
+
+</body>
+</html>

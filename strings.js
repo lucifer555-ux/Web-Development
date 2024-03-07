@@ -1,4 +1,4 @@
-// String concatenation 
+  // String concatenation 
 
 var message = "Hello";
 var name = "Visaj";
@@ -35,3 +35,5 @@ if (counter > 280){
 let name  = prompt("What's your name ? ");
 let f_letter = name.slice(0,1);
 alert("Hello " + f_letter.toUpperCase() + name.slice(1,name.length));
+
+
