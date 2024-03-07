@@ -11,7 +11,7 @@ console.log(str2);
 
 // Tweet counter challenge
 
-let person = prompt("Please enter your name !!");
+let name = prompt("Please enter your name !!");
 let totalval = 280 - person.length; 
 alert("You have entered " + person.length + " characters " + totalval + " characters left" );
 
