@@ -61,17 +61,6 @@ array.forEach((n)=>{
 console.log(array);
 
 
-const radius = [5,2,4,9];
-
-const calculateArea = function(radius) {
-  const output = [];
-  for (let i = 0; i < radius.length; i++) {
-      output.push(Math.PI * radius[i] * radius[i]);
-  }
-  return output;
-};
-
-console.log(calculateArea(radius));
 
 
 const nums = [2,4,8,10];
@@ -110,4 +99,13 @@ function binary (x)
 const o = a1.map(binary);
 
 console.log("Binary : " + o);
+
+const radius = [5,2,4,9];
+
+const area = function(radius)
+{
+    return Math.PI * radius * radius;
+}
+
+
 
