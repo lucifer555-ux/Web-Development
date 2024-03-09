@@ -107,5 +107,38 @@ const area = function(radius)
     return Math.PI * radius * radius;
 }
 
+const circumference = function(radius)
+{
+    return 2 * Math.PI * radius;
+}
+
+const diameter = function(radius)
+{
+    return 2 * radius ;
+}
+
+const calculate = function (radius, logic)
+{
+  const output = [];
+  for (let i = 0; i < radius.length; i++)
+  {
+    output.push(logic(radius[i]));
+  }
+  return output;
+};
+
+ console.log("Area : " + calculate(radius, area));
+console.log("Circumference :  " + calculate(radius, circumference));
+console.log("Diameter  : " + calculate(radius, diameter));
+
+const arr = [1,2,3,4,5,6,7,8,9,10];
 
 
+function isEven(x)
+{
+  return x % 2 == 0;
+}
+
+const result = arr.filter(isEven);
+
+console.log(result);
