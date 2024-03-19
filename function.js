@@ -131,7 +131,7 @@ const calculate = function (radius, logic)
 console.log("Circumference :  " + calculate(radius, circumference));
 console.log("Diameter  : " + calculate(radius, diameter));
 
-const arr = [1,2,3,4,5,6,7,8,9,10];
+var arr = [1,2,3,4,5,6,7,8,9,10];
 
 
 function isEven(x)
@@ -142,3 +142,17 @@ function isEven(x)
 const result = arr.filter(isEven);
 
 console.log(result);
+
+
+// reduce function 
+
+
+arr = [10,20,30,40,50];
+
+const ans = arr.reduce(function(acc,curr)
+{
+acc = acc + curr;
+return acc;
+},0);
+
+console.log("Reduce " + ans);
