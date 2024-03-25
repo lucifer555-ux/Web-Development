@@ -1,0 +1,110 @@
+/* styles.css */
+
+/* Body */
+body {
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    background-color: #ffffff; /* Light gray background */
+}
+
+/* Headers */
+h1, h2, h3 {
+    color: #333; /* Dark gray */
+}
+
+/* Links */
+a {
+    color: #007bff; /* Blue */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Buttons */
+.btn {
+    border-radius: 25px; /* Rounded corners */
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.btn:hover {
+    background-color: #007bff; /* Blue on hover */
+}
+
+/* Jumbotron */
+.jumbotron {
+    border-radius: 15px; /* Rounded corners */
+    background: linear-gradient(to bottom, #007bff, #0056b3); /* Gradient background */
+    color: #fff; /* White text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Card */
+.card {
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Card Headers */
+.card-header {
+    border-radius: 15px 15px 0 0; /* Rounded top corners */
+}
+
+/* Card Body */
+.card-body {
+    background-color: #fff; /* White background */
+}
+
+/* Project Titles */
+.project h3 {
+    color: #28a745; /* Green */
+}
+
+/* Text Colors */
+.text-primary {
+    color: #007bff; /* Blue */
+}
+
+.text-success {
+    color: #28a745; /* Green */
+}
+
+.text-info {
+    color: #17a2b8; /* Cyan */
+}
+
+.text-warning {
+    color: #ffc107; /* Yellow */
+}
+
+.text-dark {
+    color: #343a40; /* Dark gray */
+}
+
+/* Download Button */
+#download-resume .btn {
+    background-color: #212529; /* Dark gray */
+    border-color: #212529; /* Dark gray */
+}
+
+#download-resume .btn:hover {
+    background-color: #0d0d0d; /* Darker gray on hover */
+    border-color: #0d0d0d; /* Darker gray on hover */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply Fade-in Animation to Sections */
+section {
+    animation: fadeIn 1s ease;
+}
