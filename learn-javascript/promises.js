@@ -24,14 +24,16 @@ new Promise(function(resolve,reject){
 // 25 March 2024 
 
 
-const cart = ["shoes", "jeans", "tshirts"];
+// const cart = ["shoes", "jeans", "tshirts"];
 
-const Promise = createOrder(cart)
+// const Promise = createOrder(cart)
 
-Promise.then(function (orderId)
-{
-    proceedToPayment(orderId);
-})
+// promise.then(function (orderId)
+// {
+
+//     console.log(orderId);
+//     // proceedToPayment(orderId);
+// })
 
 
 const API = "https://moviesdatabase.p.rapidapi.com/titles/series/%7BseriesId%7D";
@@ -48,3 +50,45 @@ createOrder(cart)
 .then((paymentInfo) => showOrderSummary(orderId))
 .then((paymentInfo) => updateWalletBalance(orderId));
 
+
+const cart = ["shoes", "jeans", "tshirts"];
+
+const Promise = createOrder(cart)
+
+promise.then(function (orderId)
+{
+
+    console.log(orderId);
+})
+
+.catch( function() {
+console.log(err.message);
+});
+
+function ValidateCart(){
+return true;
+}
+
+
+
+function createOrder(cart){
+const pr = new Promise(function (resolve, reject){
+
+    if(!ValidateCart (cart))
+    {
+        const err = new Error ("Cart is not valid ");
+        reject(err);
+    }
+
+    const orderId = "12345";
+    if(orderId)
+    {
+        setTimeout(function(){
+        resolve(orderId);
+        }, 5000);
+    }
+
+});
+
+return pr;
+}
